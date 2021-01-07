@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 82605,
+      "categoryId": 1,
+      "photo": "https://picsum.photos/id/43/300/300",
+      "title": "Ad officia magna veniam sunt."
+    },
+    {
+      "id": 74760,
+      "categoryId": 3,
+      "photo": "https://picsum.photos/id/722/300/300",
+      "title": "Minim anim in sunt esse nisi sit magna consequat in sit laboris adipisicing."
+    },
+    {
+      "title": "test1",
+      "categoryId": 1,
+      "photo": "https://picsum.photos/id/732/300/300",
+      "id": 82606
+    },
+    {
+      "title": "test2",
+      "categoryId": 2,
+      "photo": "https://picsum.photos/id/931/300/300",
+      "id": 82607
+    },
+    {
+      "title": "test3",
+      "categoryId": 2,
+      "photo": "https://picsum.photos/id/130/300/300",
+      "id": 82608
+    }
+  ]
+}
