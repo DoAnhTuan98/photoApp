@@ -26,6 +26,7 @@ function PhotoCard(props) {
         if (onRemoveClick) {
             onRemoveClick(photo)
         }
+        console.log(photo.id)
     }
     return (
         <div className="photo">

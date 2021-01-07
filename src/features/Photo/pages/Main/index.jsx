@@ -5,6 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import PhotoList from 'features/Photo/components/PhotoList'
 import { removePhoto } from 'features/Photo/photoSlice';
+import { actDelete } from 'features/Photo/photoSlice';
 MainPage.propTypes = {};
 
 function MainPage(props) {
@@ -14,7 +15,7 @@ function MainPage(props) {
   // console.log('List', photos);
 
   const handlePhotoEditClick = (photo) => {
-    console.log('Edit', photo);
+    // console.log('Edit', photo);
     const editPhotoUrl = `/photos/${photo.id}`
     history.push(editPhotoUrl)
   }
@@ -22,7 +23,7 @@ function MainPage(props) {
   const handlePhotoRemoveClick = (photo) => {
     // console.log('Remove', photo);
     const removePhotoId = photo.id
-    const action = removePhoto(removePhotoId)
+    const action = actDelete(removePhotoId)
     dispatch(action)
   }
   return (

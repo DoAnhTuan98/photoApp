@@ -7,6 +7,7 @@ import { updatePhoto } from 'features/Photo/photoSlice';
 import { useHistory, useParams } from 'react-router-dom';
 import { addPhoto } from 'features/Photo/photoSlice';
 import { actAdd } from 'features/Photo/photoSlice';
+import { actUpdate } from 'features/Photo/photoSlice';
 
 AddEditPage.propTypes = {};
 
@@ -29,20 +30,17 @@ function AddEditPage(props) {
   const handleSubmit = (values) => {
     // const product = { values }
     // console.log('Form submit', product);
-    console.log(values)
-    if (isAddMode) {
-      const action = actAdd(values)
-      console.log({ action });
+    // console.log(values)
+    if (values.id) {
+      console.log(values)
+      const action = actUpdate(values)
       dispatch(action)
       history.push('/photos')
-      // actAdd(values)
-
-
     } else {
-      const action = updatePhoto(values)
+      console.log(values)
+      const action = actAdd(values)
       dispatch(action)
       history.push('/photos')
-
     }
   }
 

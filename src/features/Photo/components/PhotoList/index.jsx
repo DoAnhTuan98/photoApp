@@ -22,7 +22,7 @@ function PhotoList(props) {
     const { onPhotoEditClick, onPhotoRemoveClick } = props
     const dispatch = useDispatch()
     const photoList = useSelector(state => state.photos)// chỗ này này h làm gì con state.photos nữa nhỉ
-    console.log(photoList);
+    // console.log(photoList);
     useEffect(() => {
         dispatch(fetchPhotos())
     }, [dispatch])
@@ -30,7 +30,7 @@ function PhotoList(props) {
     return (
         <Row>
             {photoList.map(photo => (// fetch qua map
-                <Col key={photo.categoryId} xs='12' md='6' lg='3' >
+                <Col key={photo.id} xs='12' md='6' lg='3' >
                     <PhotoCard
                         photo={photo}
                         onRemoveClick={onPhotoRemoveClick}
